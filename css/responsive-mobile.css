@@ -144,9 +144,7 @@ li {
   /* ############ category-main.html############*/
 }
 @media (max-width: 767px) and (max-width: 767px) {
-  .front-slider {
-    border: 1px solid #000;
-  }
+
   .front-slider .front-slider-items .front-slider-item .front-slider-item-wrap {
     width: 100%;
     height: auto;
