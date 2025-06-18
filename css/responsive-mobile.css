@@ -44,9 +44,6 @@ li {
 }
 /* responsive Mobile */
 @media (max-width: 767px) {
-  body {
-    background: rgb(243, 130, 130);
-  }
   /* ############ Common CSS ############*/
   section:not(.front-slider) {
     padding: 35px 0;
