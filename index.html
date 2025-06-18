@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../images/favicon.png">
+  <title>매주 만나자, 미스터피자</title>
+  <!-- swiper-bundle -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- bootstrap-icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.ncet/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" href="https://img.icons8.com/color/48/pizza.png" alt="pizza"/>">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive-mobile.css">
+  <link rel="stylesheet" href="css/responsive-tablet.css">
+  
+</head>
+<body>
+  <!-- Login Modal -->
+  <div class="login-modal" id="loginModal">
+    <div class="modal-overlay"></div>
+    <div class="modal-content">
+      <div class="modal_img">
+        <img src="/images/logo_pc.jpg" alt="modal_logo">
+      </div>
+      <div class="modal_title">
+        <h3>LOGIN</h3>
+        <p>매주 만나자,<br>Mr.Pizza 웹사이트 방문을 환영합니다.</p>
+      </div>
+      <div class="modal_input">
+        <span class="id_input"><input type="text" placeholder="아이디 입력" id="id_input"></span>
+        <span class="pw_input"><input type="password" placeholder="비밀번호 입력" id="pw_input"></span>
+      </div>
+      <div class="modal_btn_wrap">
+        <button type="button" class="login" id="login_submit">로그인</button>
+        <div class="kakao_login">
+          <button type="button" class="g_login">
+            <img src="images/kakao_login.png" alt="kakao_login">
+            <p>카카오 계정으로 로그인</p>
+          </button>
+        </div>
+        <div class="google_login">
+          <button type="button" class="g_login">
+            <img src="images/Google_login.svg.png" alt="google_login">
+            <p>구글 계정으로 로그인</p>
+          </button>
+        </div>
+      </div>
+      <div class="info_memo">
+        <span>아직 Mr.Pizza 회원이 아니신가요?</span>
+        <u>회원가입</u>
+      </div>
+      <div class="modal-close">X</div>
+    </div>
+  </div>
+  <!-- Event Banner -->
+  <!--
+  <div class="front-event-banner">
+    <div class="event-banner-item mentor-apply">
+      <a href="#none">
+        <img src="images/event-banner-mentor.png">
+      </a>
+    </div>
+    <div class="event-banner-item new-year">
+      <a href="#none"><img src="images/event-banner-new-year.png"></a>
+    </div>
+    <div class="close-buttons">
+      <a href="#none" class="btn-hide">오늘 그만 보기</a>
+      <a href="#none" class="btn-close">닫기</a>
+    </div>
+  </div>
+  -->
+  <!-- container front -->
+  <div class="container front">
+    <!-- Header -->
+    <div class="header-include"></div>
+    <!-- section : front-slider -->
+    <div class="swiper mySwiper front-slider">
+      <div class="swiper-wrapper front-slider-items">
+        <div class="swiper-slide front-slider-item">
+          <div class="front-slider-item-wrap">
+            <div class="pic">
+              <img src="images/slide01.jpg" alt="slide01">
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide front-slider-item">
+          <div class="front-slider-item-wrap">
+            <div class="pic">
+              <img src="images/slide02.jpg" alt="slide02">
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide front-slider-item">
+          <div class="front-slider-item-wrap">
+            <div class="pic">
+              <img src="images/slide04.jpg" alt="slide04">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- section : category-shortcut -->
+    <section class="category-shortcut">
+      <div class="category-shortcut-inner">
+        <div class="category-shortcut-items">
+          <a href="html/category-main.html" class="category-shortcut-item">
+            <em><i class="bi bi-calendar-event"></i></em>
+            <span>이벤트</span>
+          </a>
+          <a href="html/category-main.html" class="category-shortcut-item">
+            <em><i class="fa-solid fa-motorcycle"></i></em>
+            <span>바로 주문</span>
+          </a>
+          <a href="html/category-main.html" class="category-shortcut-item">
+            <em><i class="fa-solid fa-location-dot"></i></em>
+            <span>매장 위치 찾기</span>
+          </a>
+          <a href="html/category-main.html" class="category-shortcut-item">
+            <em><i class="fa-solid fa-heart-circle-plus"></i></em>
+            <span>단체주문 예약</span>
+          </a>
+          <a href="html/category-main.html" class="category-shortcut-item">
+            <em><i class="fa-solid fa-person"></i></em>
+            <span>마이 미피</span>
+          </a>
+          <a href="html/category-main.html" class="category-shortcut-item">
+            <em><i class="bi bi-three-dots"></i></em>
+            <span>더 보기</span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- section : focus-class-->
+    <div class="focus-class">
+      <div class="focus-class-inner">
+        <div class="focus-class-content">
+          <div class="front-header">
+            <h2>반값다! 미스터피자! 이벤트</h2>
+            <a href="#none" class="btn-view-all">전체 이벤트 보기</a>
+          </div>
+          <div class="swiper mySwiper02 ">
+            <div class="swiper-wrapper focus-class-items">
+              <div class="swiper-slide focus-class-item">
+                <div class="thumb">
+                  <img src="https://search.pstatic.net/common/?src=https%3A%2F%2Fditto-phinf.pstatic.net%2F20250609_198%2F17494333649891Rdlr_PNG%2F68463c14939a56262f286ade.png&type=o&size=232x152&ttype=input" alt="">
+                  <span class="badge discount">30%할인</span>
+                </div>
+                <div class="overview">
+                  <h4>평일 반값, 출시 후 꾸준히 사랑받는 베스트셀러!</h4>
+                  <div class="class-info">미스터피자 · 16,740원 ·포장 13,950원</div>
+                  <div class="class-price">
+                    <div class="sale">30%</div>
+                    <div class="price-prev">132,000원</div>
+                    <div class="price-current">92,400원</div>
+                  </div>
+                  <div class="class-review">
+                    <div class="starts">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-half"></i>
+                    </div>
+                    <div class="rating">4.9</div>
+                    <div class="trainee">1,234명 수강</div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide focus-class-item">
+                <div class="thumb">
+                  <img src="https://search.pstatic.net/common/?src=https%3A%2F%2Fditto-phinf.pstatic.net%2F20250609_22%2F1749433364994wTiGD_PNG%2F68463c14939a56262f286adc.png&type=o&size=232x152&ttype=input" alt="">
+                  <span class="badge discount">30%할인</span>
+                </div>
+                <div class="overview">
+                  <h4>사이드 신메뉴 판타스틱 콤보, 서프라이즈 콤보 등 영양정보를 확인하세요!</h4>
+                  <div class="class-info">미스터피자 · 16,740원 ·포장 13,950원</div>
+                  <div class="class-price">
+                    <div class="sale">30%</div>
+                    <div class="price-prev">132,000원</div>
+                    <div class="price-current">92,400원</div>
+                  </div>
+                  <div class="class-review">
+                    <div class="starts">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-half"></i>
+                    </div>
+                    <div class="rating">4.9</div>
+                    <div class="trainee">1,234명 수강</div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide focus-class-item">
+                <div class="thumb">
+                  <img src="https://search.pstatic.net/common/?src=https%3A%2F%2Fditto-phinf.pstatic.net%2F20250609_129%2F1749433364995UnCOy_PNG%2F68463c14939a56262f286add.png&type=o&size=232x152&ttype=input" alt="">
+                  <span class="badge discount">30%할인</span>
+                </div>
+                <div class="overview">
+                  <h4>더블 쉬림프 두가지 새우에 포테이토 크런치!</h4>
+                  <div class="class-info">미스터피자 · 16,740원 ·포장 13,950원</div>
+                  <div class="class-price">
+                    <div class="sale">30%</div>
+                    <div class="price-prev">132,000원</div>
+                    <div class="price-current">92,400원</div>
+                  </div>
+                  <div class="class-review">
+                    <div class="starts">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-half"></i>
+                    </div>
+                    <div class="rating">4.9</div>
+                    <div class="trainee">1,234명 수강</div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide focus-class-item">
+                <div class="thumb">
+                  <img src="https://search.pstatic.net/common/?src=https%3A%2F%2Fditto-phinf.pstatic.net%2F20250609_198%2F17494333649891Rdlr_PNG%2F68463c14939a56262f286ade.png&type=o&size=232x152&ttype=input" alt="">
+                  <span class="badge discount">30%할인</span>
+                </div>
+                <div class="overview">
+                  <h4>평일 반값, 출시 후 꾸준히 사랑받는 베스트셀러!</h4>
+                  <div class="class-info">미스터피자 · 16,740원 ·포장 13,950원</div>
+                  <div class="class-price">
+                    <div class="sale">30%</div>
+                    <div class="price-prev">132,000원</div>
+                    <div class="price-current">92,400원</div>
+                  </div>
+                  <div class="class-review">
+                    <div class="starts">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-half"></i>
+                    </div>
+                    <div class="rating">4.9</div>
+                    <div class="trainee">1,234명 수강</div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide focus-class-item">
+                <div class="thumb">
+                  <img src="https://search.pstatic.net/common/?src=https%3A%2F%2Fditto-phinf.pstatic.net%2F20250609_22%2F1749433364994wTiGD_PNG%2F68463c14939a56262f286adc.png&type=o&size=232x152&ttype=input" alt="">
+                  <span class="badge discount">30%할인</span>
+                </div>
+                <div class="overview">
+                  <h4>사이드 신메뉴 판타스틱 콤보, 서프라이즈 콤보 등 영양정보를 확인하세요!</h4>
+                  <div class="class-info">미스터피자 · 16,740원 ·포장 13,950원</div>
+                  <div class="class-price">
+                    <div class="sale">30%</div>
+                    <div class="price-prev">132,000원</div>
+                    <div class="price-current">92,400원</div>
+                  </div>
+                  <div class="class-review">
+                    <div class="starts">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-half"></i>
+                    </div>
+                    <div class="rating">4.9</div>
+                    <div class="trainee">1,234명 수강</div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide focus-class-item">
+                <div class="thumb">
+                  <img src="https://search.pstatic.net/common/?src=https%3A%2F%2Fditto-phinf.pstatic.net%2F20250609_129%2F1749433364995UnCOy_PNG%2F68463c14939a56262f286add.png&type=o&size=232x152&ttype=input" alt="">
+                  <span class="badge discount">30%할인</span>
+                </div>
+                <div class="overview">
+                  <h4>더블 쉬림프 두가지 새우에 포테이토 크런치!</h4>
+                  <div class="class-info">미스터피자 · 16,740원 ·포장 13,950원</div>
+                  <div class="class-price">
+                    <div class="sale">30%</div>
+                    <div class="price-prev">132,000원</div>
+                    <div class="price-current">92,400원</div>
+                  </div>
+                  <div class="class-review">
+                    <div class="starts">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-half"></i>
+                    </div>
+                    <div class="rating">4.9</div>
+                    <div class="trainee">1,234명 수강</div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide focus-class-item">
+                <div class="thumb">
+                  <img src="https://search.pstatic.net/common/?src=https%3A%2F%2Fditto-phinf.pstatic.net%2F20250609_198%2F17494333649891Rdlr_PNG%2F68463c14939a56262f286ade.png&type=o&size=232x152&ttype=input" alt="">
+                  <span class="badge discount">30%할인</span>
+                </div>
+                <div class="overview">
+                  <h4>평일 반값, 출시 후 꾸준히 사랑받는 베스트셀러!</h4>
+                  <div class="class-info">미스터피자 · 16,740원 ·포장 13,950원</div>
+                  <div class="class-price">
+                    <div class="sale">30%</div>
+                    <div class="price-prev">132,000원</div>
+                    <div class="price-current">92,400원</div>
+                  </div>
+                  <div class="class-review">
+                    <div class="starts">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-half"></i>
+                    </div>
+                    <div class="rating">4.9</div>
+                    <div class="trainee">1,234명 수강</div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide focus-class-item">
+                <div class="thumb">
+                  <img src="https://search.pstatic.net/common/?src=https%3A%2F%2Fditto-phinf.pstatic.net%2F20250609_22%2F1749433364994wTiGD_PNG%2F68463c14939a56262f286adc.png&type=o&size=232x152&ttype=input" alt="">
+                  <span class="badge discount">30%할인</span>
+                </div>
+                <div class="overview">
+                  <h4>사이드 신메뉴 판타스틱 콤보, 서프라이즈 콤보 등 영양정보를 확인하세요!</h4>
+                  <div class="class-info">미스터피자 · 16,740원 ·포장 13,950원</div>
+                  <div class="class-price">
+                    <div class="sale">30%</div>
+                    <div class="price-prev">132,000원</div>
+                    <div class="price-current">92,400원</div>
+                  </div>
+                  <div class="class-review">
+                    <div class="starts">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-half"></i>
+                    </div>
+                    <div class="rating">4.9</div>
+                    <div class="trainee">1,234명 수강</div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide focus-class-item">
+                <div class="thumb">
+                  <img src="https://search.pstatic.net/common/?src=https%3A%2F%2Fditto-phinf.pstatic.net%2F20250609_129%2F1749433364995UnCOy_PNG%2F68463c14939a56262f286add.png&type=o&size=232x152&ttype=input" alt="">
+                  <span class="badge discount">30%할인</span>
+                </div>
+                <div class="overview">
+                  <h4>더블 쉬림프 두가지 새우에 포테이토 크런치!</h4>
+                  <div class="class-info">미스터피자 · 16,740원 ·포장 13,950원</div>
+                  <div class="class-price">
+                    <div class="sale">30%</div>
+                    <div class="price-prev">132,000원</div>
+                    <div class="price-current">92,400원</div>
+                  </div>
+                  <div class="class-review">
+                    <div class="starts">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-half"></i>
+                    </div>
+                    <div class="rating">4.9</div>
+                    <div class="trainee">1,234명 수강</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+          <br>
+          <br>
+          <div class="swiper mySwiper02 ">
+            <div class="swiper-wrapper focus-class-items">
+              <div class="swiper-slide focus-class-item">
+                <div class="thumb">
+                  <img src="https://search.pstatic.net/common/?src=https%3A%2F%2Fditto-phinf.pstatic.net%2F20250609_198%2F17494333649891Rdlr_PNG%2F68463c14939a56262f286ade.png&type=o&size=232x152&ttype=input" alt="">
+                  <span class="badge discount">30%할인</span>
+                </div>
+                <div class="overview">
+                  <h4>평일 반값, 출시 후 꾸준히 사랑받는 베스트셀러!</h4>
+                  <div class="class-info">미스터피자 · 16,740원 ·포장 13,950원</div>
+                  <div class="class-price">
+                    <div class="sale">30%</div>
+                    <div class="price-prev">132,000원</div>
+                    <div class="price-current">92,400원</div>
+                  </div>
+                  <div class="class-review">
+                    <div class="starts">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-half"></i>
+                    </div>
+                    <div class="rating">4.9</div>
+                    <div class="trainee">1,234명 수강</div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide focus-class-item">
+                <div class="thumb">
+                  <img src="https://search.pstatic.net/common/?src=https%3A%2F%2Fditto-phinf.pstatic.net%2F20250609_22%2F1749433364994wTiGD_PNG%2F68463c14939a56262f286adc.png&type=o&size=232x152&ttype=input" alt="">
+                  <span class="badge discount">30%할인</span>
+                </div>
+                <div class="overview">
+                  <h4>사이드 신메뉴 판타스틱 콤보, 서프라이즈 콤보 등 영양정보를 확인하세요!</h4>
+                  <div class="class-info">미스터피자 · 16,740원 ·포장 13,950원</div>
+                  <div class="class-price">
+                    <div class="sale">30%</div>
+                    <div class="price-prev">132,000원</div>
+                    <div class="price-current">92,400원</div>
+                  </div>
+                  <div class="class-review">
+                    <div class="starts">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-half"></i>
+                    </div>
+                    <div class="rating">4.9</div>
+                    <div class="trainee">1,234명 수강</div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide focus-class-item">
+                <div class="thumb">
+                  <img src="https://search.pstatic.net/common/?src=https%3A%2F%2Fditto-phinf.pstatic.net%2F20250609_129%2F1749433364995UnCOy_PNG%2F68463c14939a56262f286add.png&type=o&size=232x152&ttype=input" alt="">
+                  <span class="badge discount">30%할인</span>
+                </div>
+                <div class="overview">
+                  <h4>더블 쉬림프 두가지 새우에 포테이토 크런치!</h4>
+                  <div class="class-info">미스터피자 · 16,740원 ·포장 13,950원</div>
+                  <div class="class-price">
+                    <div class="sale">30%</div>
+                    <div class="price-prev">132,000원</div>
+                    <div class="price-current">92,400원</div>
+                  </div>
+                  <div class="class-review">
+                    <div class="starts">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-half"></i>
+                    </div>
+                    <div class="rating">4.9</div>
+                    <div class="trainee">1,234명 수강</div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide focus-class-item">
+                <div class="thumb">
+                  <img src="https://search.pstatic.net/common/?src=https%3A%2F%2Fditto-phinf.pstatic.net%2F20250609_198%2F17494333649891Rdlr_PNG%2F68463c14939a56262f286ade.png&type=o&size=232x152&ttype=input" alt="">
+                  <span class="badge discount">30%할인</span>
+                </div>
+                <div class="overview">
+                  <h4>평일 반값, 출시 후 꾸준히 사랑받는 베스트셀러!</h4>
+                  <div class="class-info">미스터피자 · 16,740원 ·포장 13,950원</div>
+                  <div class="class-price">
+                    <div class="sale">30%</div>
+                    <div class="price-prev">132,000원</div>
+                    <div class="price-current">92,400원</div>
+                  </div>
+                  <div class="class-review">
+                    <div class="starts">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-half"></i>
+                    </div>
+                    <div class="rating">4.9</div>
+                    <div class="trainee">1,234명 수강</div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide focus-class-item">
+                <div class="thumb">
+                  <img src="https://search.pstatic.net/common/?src=https%3A%2F%2Fditto-phinf.pstatic.net%2F20250609_22%2F1749433364994wTiGD_PNG%2F68463c14939a56262f286adc.png&type=o&size=232x152&ttype=input" alt="">
+                  <span class="badge discount">30%할인</span>
+                </div>
+                <div class="overview">
+                  <h4>사이드 신메뉴 판타스틱 콤보, 서프라이즈 콤보 등 영양정보를 확인하세요!</h4>
+                  <div class="class-info">미스터피자 · 16,740원 ·포장 13,950원</div>
+                  <div class="class-price">
+                    <div class="sale">30%</div>
+                    <div class="price-prev">132,000원</div>
+                    <div class="price-current">92,400원</div>
+                  </div>
+                  <div class="class-review">
+                    <div class="starts">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-half"></i>
+                    </div>
+                    <div class="rating">4.9</div>
+                    <div class="trainee">1,234명 수강</div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide focus-class-item">
+                <div class="thumb">
+                  <img src="https://search.pstatic.net/common/?src=https%3A%2F%2Fditto-phinf.pstatic.net%2F20250609_129%2F1749433364995UnCOy_PNG%2F68463c14939a56262f286add.png&type=o&size=232x152&ttype=input" alt="">
+                  <span class="badge discount">30%할인</span>
+                </div>
+                <div class="overview">
+                  <h4>더블 쉬림프 두가지 새우에 포테이토 크런치!</h4>
+                  <div class="class-info">미스터피자 · 16,740원 ·포장 13,950원</div>
+                  <div class="class-price">
+                    <div class="sale">30%</div>
+                    <div class="price-prev">132,000원</div>
+                    <div class="price-current">92,400원</div>
+                  </div>
+                  <div class="class-review">
+                    <div class="starts">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-half"></i>
+                    </div>
+                    <div class="rating">4.9</div>
+                    <div class="trainee">1,234명 수강</div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide focus-class-item">
+                <div class="thumb">
+                  <img src="https://search.pstatic.net/common/?src=https%3A%2F%2Fditto-phinf.pstatic.net%2F20250609_198%2F17494333649891Rdlr_PNG%2F68463c14939a56262f286ade.png&type=o&size=232x152&ttype=input" alt="">
+                  <span class="badge discount">30%할인</span>
+                </div>
+                <div class="overview">
+                  <h4>평일 반값, 출시 후 꾸준히 사랑받는 베스트셀러!</h4>
+                  <div class="class-info">미스터피자 · 16,740원 ·포장 13,950원</div>
+                  <div class="class-price">
+                    <div class="sale">30%</div>
+                    <div class="price-prev">132,000원</div>
+                    <div class="price-current">92,400원</div>
+                  </div>
+                  <div class="class-review">
+                    <div class="starts">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-half"></i>
+                    </div>
+                    <div class="rating">4.9</div>
+                    <div class="trainee">1,234명 수강</div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide focus-class-item">
+                <div class="thumb">
+                  <img src="https://search.pstatic.net/common/?src=https%3A%2F%2Fditto-phinf.pstatic.net%2F20250609_22%2F1749433364994wTiGD_PNG%2F68463c14939a56262f286adc.png&type=o&size=232x152&ttype=input" alt="">
+                  <span class="badge discount">30%할인</span>
+                </div>
+                <div class="overview">
+                  <h4>사이드 신메뉴 판타스틱 콤보, 서프라이즈 콤보 등 영양정보를 확인하세요!</h4>
+                  <div class="class-info">미스터피자 · 16,740원 ·포장 13,950원</div>
+                  <div class="class-price">
+                    <div class="sale">30%</div>
+                    <div class="price-prev">132,000원</div>
+                    <div class="price-current">92,400원</div>
+                  </div>
+                  <div class="class-review">
+                    <div class="starts">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-half"></i>
+                    </div>
+                    <div class="rating">4.9</div>
+                    <div class="trainee">1,234명 수강</div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide focus-class-item">
+                <div class="thumb">
+                  <img src="https://search.pstatic.net/common/?src=https%3A%2F%2Fditto-phinf.pstatic.net%2F20250609_129%2F1749433364995UnCOy_PNG%2F68463c14939a56262f286add.png&type=o&size=232x152&ttype=input" alt="">
+                  <span class="badge discount">30%할인</span>
+                </div>
+                <div class="overview">
+                  <h4>더블 쉬림프 두가지 새우에 포테이토 크런치!</h4>
+                  <div class="class-info">미스터피자 · 16,740원 ·포장 13,950원</div>
+                  <div class="class-price">
+                    <div class="sale">30%</div>
+                    <div class="price-prev">132,000원</div>
+                    <div class="price-current">92,400원</div>
+                  </div>
+                  <div class="class-review">
+                    <div class="starts">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-half"></i>
+                    </div>
+                    <div class="rating">4.9</div>
+                    <div class="trainee">1,234명 수강</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- section : best-class -->
+    <section class="best-class">
+      <div class="best-class-inner">
+        <div class="best-class-content">
+          <div class="front-header">
+            <h2>베스트 메뉴 추천</h2>
+            <a href="#none">전체보기</a>
+          </div>
+          <div class="best-class-wrap">
+            <div class="best-class-banner">
+              <a href="#none"><img src="https://cdn.mrpizza.co.kr/2024_resources/images/newmenu_250423.jpg" alt=""></a>
+            </div>
+            <div class="best-class-banner">
+              <a href="#none"><img src="https://akamai.pizzahut.co.kr/event/HH-202501_event_pc_1.gif" alt=""></a>
+            </div>
+            <div class="best-class-banner">
+              <a href="#none"><img src="https://cdn.esgeconomy.com/news/photo/202409/7871_11099_2640.jpg" alt=""></a>
+            </div>
+           
+          </div><br>
+          <div class="best-class-wrap">
+            <div class="best-class-banner">
+              <a href="#none"><img src="https://cdn.esgeconomy.com/news/photo/202412/9245_13004_2527.jpg" alt=""></a>
+            </div>
+            <div class="best-class-banner">
+              <a href="#none"><img src="https://cdn.m-i.kr/news/photo/201811/470060_285297_2519.jpg" alt=""></a>
+            </div>
+            <div class="best-class-banner">
+              <a href="#none"><img src="https://file.sportsseoul.com/news/legacy/2023/03/21/news/2023032101000902600067071.jpg" alt=""></a>
+            </div>
+           
+          </div><br>
+          <div class="best-class-wrap">
+            <div class="best-class-banner">
+              <a href="#none"><img src="https://cdn.mrpizza.co.kr/2023_resources/popup/pop_main_230307.png" alt=""></a>
+            </div>
+            <div class="best-class-banner">
+              <a href="#none"><img src="https://cdn.mrpizza.co.kr/2024_resources/popup/pop_main_240124.jpg" alt=""></a>
+            </div>
+            <div class="best-class-banner">
+              <a href="#none"><img src="https://cdn.mrpizza.co.kr/2011/uploadV1/now/20231124161219734.jpg" alt=""></a>
+            </div>
+           
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- section : blog -->
+    <section class="blog">
+      <div class="blog-inner">
+        <div class="blog-content">
+          <div class="front-header">
+            <h2>CLASS 101, 블로그 읽어보기</h2>
+            <a href="#none">전체보기</a>
+          </div>
+          <div class="blog-items">
+            <div class="blog-item">
+              <div class="thumb">
+                <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDEyMjNfMjYz%2FMDAxNzM0OTU2MjkzNjQy.2_gzLG67Tg5H3gZi5wBGtRVKiiUl5NXFN3kp9FFOlYcg.kAPL-nu1TDaB_2_zq8yRhUzKiUSgejal-8L5SJL4WZAg.JPEG%2FIMG_2411.JPG%233000x2000&type=f250_208">
+              </div>
+              <div class="desc">
+                <div class="blog-sort">파워블로거 | 푸드 | 미스터피자</div>
+                <div class="blog-outline">
+                  <h4>미스터피자 블라썸 하프앤하프 통신사 할인 중동점 메뉴 포장</h4>
+                  <p>미스터피자 메뉴 포장 후기를 남겨보았어요 :)</p>
+                </div>
+                <div class="blog-writer">
+                  <div class="writer-avatar">
+                    <img src="images/mentor-avatar-01.png" alt="">
+                  </div>
+                  <div class="writer-info">
+                    <b>라이프해커 자청 </b>
+                    <div class="date-comment">
+                      <span><i class="bi bi-calendar4"></i>May 24</span>
+                      <span><i class="bi bi-chat"></i>4 comments</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="blog-item">
+              <div class="thumb">
+                <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNTA2MDlfMTYg%2FMDAxNzQ5Mzk0ODAwMjI4.iAiGShshbB04LC4ECr2nhMkmYUHZHJpKTfUiUDJ6mfsg.GxX3J90t2ux-BeV9vCUYhBBKuTH_b4Mjxl6ldn3P6mEg.JPEG%2F2025-05_%25C1%25F8%25C1%25D6_%25B9%25CC%25BD%25BA%25C5%25CD%25C7%25C7%25C0%25DA_%252810%2529.jpg%232186x1230&type=f250_208">
+              </div>
+              <div class="desc">
+                <div class="blog-sort">파워블로거 | 푸드 | 미스터피자</div>
+                <div class="blog-outline">
+                  <h4>시내 맛집, 미스터피자 진주점 샐러드바</h4>
+                  <p>피자 피자 피자 시내 미스터피자 주말에 다녀왔어요 :)</p>
+                </div>
+                <div class="blog-writer">
+                  <div class="writer-avatar">
+                    <img src="images/mentor-avatar-02.png" alt="">
+                  </div>
+                  <div class="writer-info">
+                    <b>라이프해커 자청 </b>
+                    <div class="date-comment">
+                      <span><i class="bi bi-calendar4"></i>May 24</span>
+                      <span><i class="bi bi-chat"></i>4 comments</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="blog-item">
+              <div class="thumb">
+                <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNTA2MThfMTY0%2FMDAxNzUwMjExOTI3NjE2.qiBG9jhdzIkR3D7c2oDTbjLJkRpbtDUrdhbaFUX_nYIg.AswxTZb3122Mh7TbQ2ETLo2Htpj4Yfqpnf8DFCC_V18g.JPEG%2F900%25A3%25DF20231007%25A3%25DF180734.jpg%23900x672&type=f250_208">
+              </div>
+              <div class="desc">
+                <div class="blog-sort">파워블로거 | 푸드 | 미스터피자</div>
+                <div class="blog-outline">
+                  <h4>대구 피자 뷔페 : 미스터피자를 소개합니다.</h4>
+                  <p>피자 없이 못사는 저로서는 안 가볼 수가 없겠더라구요...</p>
+                </div>
+                <div class="blog-writer">
+                  <div class="writer-avatar">
+                    <img src="images/mentor-avatar-03.png" alt="">
+                  </div>
+                  <div class="writer-info">
+                    <b>라이프해커 자청 </b>
+                    <div class="date-comment">
+                      <span><i class="bi bi-calendar4"></i>May 24</span>
+                      <span><i class="bi bi-chat"></i>4 comments</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- section : slogan -->
+    <section class="slogan">
+      <div class="slogan-inner">
+        <div class="slogan-content">
+          <br><br><br>
+          <h2>마음을 담은 특별한 피자</h2>
+          <p>
+            레터링피자 <em> L 35,900원 </em> 기념일에도 미스터피자와 함께하세요 :
+          </p>
+          <img src="https://cdn.mrpizza.co.kr/2024_resources/images/intro_20250618.jpg" alt="">
+        </div>
+      </div>
+    </section>
+    <!-- section : tip-tech -->
+    <section class="tip-tech">
+      <div class="tip-tech-inner">
+        <div class="tip-tech-content">
+          <div class="front-header">
+            <h2>피자 맛있게 즐기기 TIP</h2>
+            <a href="#none">전체보기</a>
+          </div>
+          <div class="tip-tech-wrap">
+            <div class="tip-tech-items">
+              <div class="tip-tech-item">
+                <div class="tip-tech-info">
+                  <span>초간단 식빵피자 만들기 </span>
+                  <h3>[셀프 피자] 에어프라이어 모짜렐라치즈피자 레시피</h3>
+                  <p>
+                    치즈피자만들기 에어프라이어 모짜렐라 식빵피자 레시피 글 · 사진 by 제시 지난주 연휴 3일~! 아니 아이는 개교기념일까지 있어서 4일 연휴가 있었..
+                  </p>
+                </div>
+                <div class="thumb">
+                  <img src="https://search.pstatic.net/common/?src=https%3A%2F%2Fmblogthumb-phinf.pstatic.net%2FMjAyNTA1MTNfNjAg%2FMDAxNzQ3MTE1MzcxOTg3.qkbu7yK1wfS82q6S6_PFuVtLqTWJJVsQrp_DnH_7M4Ag.Ovg8kMas3JrQuaO10wYlwOv9GF1j8IH7t47lET1rva4g.JPEG%2F20230228_133442.jpg%3Ftype%3Dw800&type=f250_208" alt="">
+                </div>
+              </div>
+              <div class="tip-tech-item">
+                <div class="tip-tech-info">
+                  <span>초간단 식빵피자 만들기 </span>
+                  <h3>[셀프 피자] 에어프라이어 모짜렐라치즈피자 레시피</h3>
+                  <p>
+                    치즈피자만들기 에어프라이어 모짜렐라 식빵피자 레시피 글 · 사진 by 제시 지난주 연휴 3일~! 아니 아이는 개교기념일까지 있어서 4일 연휴가 있었..
+                  </p>
+                </div>
+                <div class="thumb">
+                  <img src="https://search.pstatic.net/common/?src=https%3A%2F%2Fmblogthumb-phinf.pstatic.net%2FMjAyNTA2MTJfMTI1%2FMDAxNzQ5NzE0ODU5NDc3.UzKlQVzGmqBq5rzCyRKa3uYwN45EWvutYCmW_YqOuz8g.vNqLJ1KvuVYz5murXrvIXyMm1RHZAkUqQWMzcNLDVFgg.JPEG%2FIMG_8699.jpg%3Ftype%3Dw800&type=f250_208" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="tip-tech-items">
+              <div class="tip-tech-item">
+                <div class="tip-tech-info">
+                  <span>초간단 식빵피자 만들기 </span>
+                  <h3>[셀프 피자] 에어프라이어 모짜렐라치즈피자 레시피</h3>
+                  <p>
+                    치즈피자만들기 에어프라이어 모짜렐라 식빵피자 레시피 글 · 사진 by 제시 지난주 연휴 3일~! 아니 아이는 개교기념일까지 있어서 4일 연휴가 있었..
+                  </p>
+                </div>
+                <div class="thumb">
+                  <img src="https://search.pstatic.net/common/?src=https%3A%2F%2Fmblogthumb-phinf.pstatic.net%2FMjAyNTA1MjJfMjU2%2FMDAxNzQ3OTA3NTM1MzEy.FqDBS8o4AprHf61I5aN1U5PbKLFoOSI-HJZBD0mbq-0g.ed_7VEfCbTDi5DXPQi1fpBhk0VhssqPAeFO12bH0BVsg.JPEG%2FIMG_9361.jpg%3Ftype%3Dw800&type=f250_208" alt="">
+                </div>
+              </div>
+              <div class="tip-tech-item">
+                <div class="tip-tech-info">
+                  <span>초간단 식빵피자 만들기 </span>
+                  <h3>[셀프 피자] 에어프라이어 모짜렐라치즈피자 레시피</h3>
+                  <p>
+                    치즈피자만들기 에어프라이어 모짜렐라 식빵피자 레시피 글 · 사진 by 제시 지난주 연휴 3일~! 아니 아이는 개교기념일까지 있어서 4일 연휴가 있었..
+                  </p>
+                </div>
+                <div class="thumb">
+                  <img src="https://search.pstatic.net/common/?src=https%3A%2F%2Fmblogthumb-phinf.pstatic.net%2FMjAyNTA1MjlfMTU3%2FMDAxNzQ4NDk1OTg1ODY1.1kXu-ZFwTsm6-0vcmcM_ikomzxVgS79NI-7c5Md3MHcg.gTFIa2fCvq5n00_B5bPpNORxUR8-EvSzyp1bRi0CJxQg.JPEG%2FIMG_1244.JPG%3Ftype%3Dw800&type=f250_208" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="tip-tech-items">
+              <div class="tip-tech-item">
+                <div class="tip-tech-info">
+                  <span>초간단 식빵피자 만들기 </span>
+                  <h3>[셀프 피자] 에어프라이어 모짜렐라치즈피자 레시피</h3>
+                  <p>
+                    치즈피자만들기 에어프라이어 모짜렐라 식빵피자 레시피 글 · 사진 by 제시 지난주 연휴 3일~! 아니 아이는 개교기념일까지 있어서 4일 연휴가 있었..
+                  </p>
+                </div>
+                <div class="thumb">
+                  <img src="https://search.pstatic.net/common/?src=https%3A%2F%2Fmblogthumb-phinf.pstatic.net%2FMjAyNTA2MDRfNCAg%2FMDAxNzQ5MDM2NDU4NTM4.SwfpcCLUnzHsCxDGE6QmFKeDdo5f2LLOkfusE7uonYsg.jj4qImRnjHHZIOaduF6aV7nlEAgOSImualnaALvkj4wg.JPEG%2FDSC08886.jpg%3Ftype%3Dw800&type=f250_208" alt="">
+                </div>
+              </div>
+              <div class="tip-tech-item">
+                <div class="tip-tech-info">
+                  <span>초간단 식빵피자 만들기 </span>
+                  <h3>[셀프 피자] 에어프라이어 모짜렐라치즈피자 레시피</h3>
+                  <p>
+                    치즈피자만들기 에어프라이어 모짜렐라 식빵피자 레시피 글 · 사진 by 제시 지난주 연휴 3일~! 아니 아이는 개교기념일까지 있어서 4일 연휴가 있었..
+                  </p>
+                </div>
+                <div class="thumb">
+                  <img src="https://search.pstatic.net/common/?src=https%3A%2F%2Fmblogthumb-phinf.pstatic.net%2FMjAyNTA2MTRfMTIz%2FMDAxNzQ5ODk4NjgyMjI5.urQG6-_LUnfuzOHp7q12lKgTMXus3F5TLqGVrUXwhk4g.W6tODTfBg3SSbX4_EQRxyM27Z56rCIbFPtj035n0Pvcg.JPEG%2F20250612_094458.jpg%3Ftype%3Dw800&type=f250_208" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="tip-tech-items">
+              <div class="tip-tech-item">
+                <div class="tip-tech-info">
+                  <span>초간단 식빵피자 만들기 </span>
+                  <h3>[셀프 피자] 에어프라이어 모짜렐라치즈피자 레시피</h3>
+                  <p>
+                    치즈피자만들기 에어프라이어 모짜렐라 식빵피자 레시피 글 · 사진 by 제시 지난주 연휴 3일~! 아니 아이는 개교기념일까지 있어서 4일 연휴가 있었..
+                  </p>
+                </div>
+                <div class="thumb">
+                  <img src="https://search.pstatic.net/common/?src=https%3A%2F%2Fmblogthumb-phinf.pstatic.net%2FMjAyNTA1MjFfMTUg%2FMDAxNzQ3Nzk5MTEzMjcx.wSykymZhkCUj54cPEqfu2-QnrYeVCkFD0E7FEJXtLvIg.eQmCg--jCmrE_9bvrcX6RFNbt-W6oVKugXCw9tIjiv8g.JPEG%2FMornipizza021_56_13.jpg%3Ftype%3Dw800&type=f250_208" alt="">
+                </div>
+              </div>
+              <div class="tip-tech-item">
+                <div class="tip-tech-info">
+                  <span>초간단 식빵피자 만들기 </span>
+                  <h3>[셀프 피자] 에어프라이어 모짜렐라치즈피자 레시피</h3>
+                  <p>
+                    치즈피자만들기 에어프라이어 모짜렐라 식빵피자 레시피 글 · 사진 by 제시 지난주 연휴 3일~! 아니 아이는 개교기념일까지 있어서 4일 연휴가 있었..
+                  </p>
+                </div>
+                <div class="thumb">
+                  <img src="https://search.pstatic.net/common/?src=https%3A%2F%2Fmblogthumb-phinf.pstatic.net%2FMjAyNTA2MDVfMTY4%2FMDAxNzQ5MTI5ODI1NTg4.3tQckbXjCd6xYuGsJyAmRmXaoEE0clpmfUMwuULat50g.aRrJukABFuuzhKDvKRELD-soKubTwtArToOxGrjUK4Ug.JPEG%2F250605_080.jpg%3Ftype%3Dw800&type=f250_208" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="#none" class="btn-tip-tech">Tip & Tech 기사 더 보기
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- footer-include -->
+    <div class="footer-include"></div> 
+  </div>
+
+  <!-- swiper.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+  <!-- custom.js -->
+  <script src="script/custom.js"></script>
+  <script src="script/swiper.js"></script>
+</body>
+</html>
