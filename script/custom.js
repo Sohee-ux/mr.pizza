@@ -1,36 +1,3 @@
-/* ############ Include Files ############*/
-/* 
-fetch('경로')
-.then(response => response.text())
-.then(data => {
-  선택자.innerHTML = data;
-})
-*/
-
-fetch('./include/footer.html')
-.then(response => response.text())
-.then(data => {
-  document.querySelector('.footer-include').innerHTML = data;
-  /* 푸터의  .link-item-title클릭시 link-item-contnet보여지게*/
-  document.querySelectorAll('.link-item-title').forEach(function(item){
-    item.addEventListener('click', function(){
-      let submenu = this.nextElementSibling;
-      console.log(submenu);
-      //현재 서브메뉴 display상태 토글
-      if(submenu.style.display==='block'){submenu.style.display='none'}else{submenu.style.display='block'}
-    })
-  })
-  /* .company-info-trigger 클릭시 주소 보이게*/
-  document.querySelector('.company-info-trigger').addEventListener('click', function(){
-    let address = document.querySelector('address');
-    if(address.style.display==='block'){address.style.display='none'}else{address.style.display='block'}
-  })
-});
-
-fetch('./include/header.html')
-.then(response => response.text())
-.then(data => {
-  document.querySelector('.header-include').innerHTML = data;
   /* 
   로그인 버튼 클릭 > 모달창이 보인다
   로그인 수행 > header ui변경
